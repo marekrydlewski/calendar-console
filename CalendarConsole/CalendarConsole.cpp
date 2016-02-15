@@ -8,9 +8,16 @@ using namespace std;
 
 int main()
 {
-	auto calendar = Calendar(2000);
-	cout << calendar.getNumberOfDay(1, 1)<< endl;
-	calendar.printCalendar();
-    return 0;
+	int year;
+	cout << "Podaj rok" << endl;
+	cin >> year;
+	if (cin.fail() || year < 1) {
+		cout << "Podales bledny rok, imbecylu" << endl;
+	}
+	else {
+		auto calendar = Calendar(year);
+		calendar.printCalendar();
+	}
+	return 0;
 }
 

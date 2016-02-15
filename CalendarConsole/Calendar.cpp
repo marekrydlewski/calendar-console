@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Calendar.h"
 
+using namespace std;
 
 Calendar::~Calendar()
 {
@@ -59,9 +60,10 @@ void Calendar::printMonthCalendar(int month)
 	if (spaceDays < 0) spaceDays = 6; //sunday
 
 	cout << endl;
-	for (auto &x : daysOfWeek)
+	cout << "\t\t\t" << this->nameOfMonths[month - 1] << endl << endl;
+	for (auto &x : this->daysOfWeek)
 	{
-		cout << x <<"\t";
+		cout << x << "\t";
 	}
 	cout << endl;
 	for (int i = 0; i < spaceDays; i++)
@@ -71,8 +73,8 @@ void Calendar::printMonthCalendar(int month)
 	for (int i = 1; i <= days; i++)
 	{
 		cout << i << "\t";
-		if ((i+spaceDays) % 7 == 0)
+		if ((i + spaceDays) % 7 == 0)
 			cout << endl;
 	}
-	cout << endl;
+	cout << endl << endl;
 }
