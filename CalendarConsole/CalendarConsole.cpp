@@ -9,7 +9,8 @@ using namespace std;
 int main()
 {
 	auto calendar = Calendar(2000);
-	cout << calendar.getFirstDayOfYear() << endl;
+	cout << calendar.getNumberOfDay(1, 1)<< endl;
+	calendar.printCalendar();
     return 0;
 }
 
