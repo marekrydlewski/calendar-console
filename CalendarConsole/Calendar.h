@@ -2,7 +2,10 @@
 class Calendar
 {
 public:
-	Calendar();
+	const int year;
+public:
+	Calendar(int year) : year(year) {};
 	~Calendar();
+	int getFirstDayOfYear();
 };
 
