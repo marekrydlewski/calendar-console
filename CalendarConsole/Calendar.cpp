@@ -3,9 +3,10 @@
 
 using namespace std;
 
-Calendar::~Calendar()
-{
-}
+const vector<string> Calendar::nameOfMonths = { "January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December" };
+
+const vector<string> Calendar::daysOfWeek = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
 
 int Calendar::getNumberOfDay(int month, int day = 1)
 {
@@ -26,7 +27,7 @@ int Calendar::getAmountOfDays(int month)
 	int days;
 	if (month == 4 || month == 6 || month == 9 || month == 11)
 		days = 30;
-	else if (month == 02)
+	else if (month == 2)
 	{
 		if (this->isLeapYear())
 			days = 29;
